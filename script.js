@@ -1,3 +1,5 @@
+import { setupGround, updateGround } from "./ground.js"
+
   const WORLD_WIDTH = 100
   const WORLD_HEIGHT = 30
 
@@ -7,6 +9,8 @@
 setPixelToWorldScale()
 window.addEventListener("resize", setPixelToWorldScale)
 
+setupGround()
+
 // update loop will run every frame of the elements in game
 let lastTime
 function update(time) {
@@ -15,10 +19,12 @@ function update(time) {
         window.requestAnimationFrame(update)
         return
     }
-    
-    const delta = time -lastTime  // delta is time between frames
-    console.log(delta)
 
+    const delta = time -lastTime  // delta is time between frames
+    //console.log(delta)
+
+    updateGround(delta, 1)
+    
     lastTime = time
     window.requestAnimationFrame(update)
 }
