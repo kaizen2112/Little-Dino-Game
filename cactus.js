@@ -30,6 +30,14 @@ export function updateCactus(delta, speedScale) {
     nextCactusTime -= delta
 }
 
+// ...  map this converts the cactus element into a value to interact with 
+export function getCactusRect() {
+    return [...document.querySelectorAll("[data-cactus]")].map(cactus => {
+        return cactus.getBoundingClientRect()
+    })
+}
+
+
 function createCactus() {
     const cactus = document.createElement("img")
     cactus.dataset.cactus = true

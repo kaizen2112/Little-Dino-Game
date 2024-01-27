@@ -49,7 +49,7 @@ body {
 .dino{ 
     --bottom: 0;
     position: absolute;
-    left: 1%;
+    left: 10%;
     height: 30%;
     /* come from js */
     bottom: calc(var(--bottom)*1%);
