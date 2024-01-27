@@ -10,6 +10,7 @@ body {
     align-items: center;
     
     min-height: 100vh;
+    background-color: #539904;
 }
 .world {
     overflow: hidden;
@@ -20,9 +21,12 @@ body {
 
 .score {
     position: absolute;
-    font-size: 3vmin;
-    right: 1vmin;
-    top: 1vmin;
+    font-size: 6vmin;
+    font-family: 'Times New Roman', Times, serif;
+    right: 50%;
+    top: 10%;
+
+    color: #FFFFFF
 }
 
 .start-screen {
